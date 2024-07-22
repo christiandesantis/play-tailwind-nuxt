@@ -1,0 +1,35 @@
+{
+  "name": "play-tailwind-nuxt",
+  "version": "1.0.0",
+  "description": "Nuxt version of the Play Tailwind Template.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "build-css": "tailwindcss -i ./tailwind.css -o ./assets/css/tailwind.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Christian De Santis",
+  "license": "MIT",
+  "dependencies": {
+    "nuxt": "^3.12.4",
+    "vue": "latest",
+    "wow.js": "^1.2.2"
+  },
+  "packageManager": "pnpm@9.5.0+sha1.8c155dc114e1689d18937974f6571e0ceee66f1d",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.6"
+  }
+}
