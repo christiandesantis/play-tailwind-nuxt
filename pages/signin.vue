@@ -182,4 +182,8 @@ useHead({
     </div>
   </section>
   <!-- ====== Forms Section End -->
+
+  <BackToTopBtn/>
+
+  <MadeWithBtn/>
 </template>
