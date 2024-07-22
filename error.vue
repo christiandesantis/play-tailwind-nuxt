@@ -1,6 +1,7 @@
 <script setup lang="ts">
+const error = useError();
 useHead({
-  title: '404 Page | Play Tailwind',
+  title: `${error.value.statusCode} | Play Tailwind`,
   meta: [
     { name: 'description', content: '' }
   ],
@@ -22,10 +23,10 @@ useHead({
             <h1
               class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
             >
-              404 Page
+              {{ `${error.statusCode} ${error.message}` }}
             </h1>
             <p class="mb-5 text-base text-body-color dark:text-dark-6">
-              There are many variations of passages of Lorem Ipsum available.
+              It looks like something broke.
             </p>
 
             <ul class="flex items-center justify-center gap-[10px]">
@@ -43,7 +44,7 @@ useHead({
                   class="flex items-center gap-[10px] text-base font-medium text-body-color"
                 >
                   <span class="text-body-color dark:text-dark-6"> / </span>
-                  404
+                  {{ error.statusCode }}
                 </a>
               </li>
             </ul>
